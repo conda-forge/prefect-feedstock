@@ -69,5 +69,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - cicdw
     - dhirschfeld
     - rzillman
