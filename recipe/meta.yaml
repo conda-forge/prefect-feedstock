@@ -1,5 +1,5 @@
 {% set name = "prefect" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/PrefectHQ/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: fb46e256b47ada3304eeac628e685254957fe8d39df21ca4f0cab3688460a08e
+  sha256: 7bf89f955d4cbd8bc1d5725128d54585d99ee430d16e2063c9efe44ef2de5bcf
 
 build:
   noarch: python
@@ -27,7 +27,7 @@ requirements:
     - croniter >=0.3,<0.4
     - cryptography >=2.2.2,<3.0
     - dask >=0.18,<2.0
-    - distributed >=1.21.8,<2.0
+    - distributed >=1.26.1,<2.0
     - docker-py >=3.4.1,<4.0
     - idna >=2.5,<2.8
     - marshmallow >=3.0.0b19,<3.1
