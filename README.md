@@ -118,7 +118,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@cidw](https://github.com/cicdw/)
+* [@cicdw](https://github.com/cicdw/)
 * [@dhirschfeld](https://github.com/dhirschfeld/)
 * [@rzillman](https://github.com/rzillman/)
 
