@@ -1,5 +1,5 @@
 {% set name = "prefect" %}
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/PrefectHQ/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 7bf89f955d4cbd8bc1d5725128d54585d99ee430d16e2063c9efe44ef2de5bcf
+  sha256: 28c81149083da422e4e0b7029b1fbf7afb90929e6115f203ce2f19649c94abe1
 
 build:
   noarch: python
