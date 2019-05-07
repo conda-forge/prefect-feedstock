@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/PrefectHQ/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: cac662539def77ccc0bab6c9cdbf8918c5c1e7301bdd0f81d02ab93c33781231
+  sha256: 56bd7d045b049435feadf88fb9d8018690701d1ccacec5c399d125a5436bc2ea
 
 build:
   noarch: python
