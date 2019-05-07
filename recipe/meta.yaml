@@ -1,5 +1,5 @@
 {% set name = "prefect" %}
-{% set version = "0.5.2" %}
+{% set version = "0.5.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/PrefectHQ/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 28c81149083da422e4e0b7029b1fbf7afb90929e6115f203ce2f19649c94abe1
+  sha256: cac662539def77ccc0bab6c9cdbf8918c5c1e7301bdd0f81d02ab93c33781231
 
 build:
   noarch: python
@@ -36,6 +36,7 @@ requirements:
     - mypy_extensions >=0.4.0,<0.5
     - pendulum >=2.0.4,<3.0
     - python-dateutil >2.7.3,<3.0
+    - python-slugify >= 1.2.6,<2.0
     - pyyaml >=3.13,<4.3
     - pytz >=2018.7
     - requests >=2.20,<3.0
