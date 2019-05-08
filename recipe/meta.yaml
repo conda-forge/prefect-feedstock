@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/PrefectHQ/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 56bd7d045b049435feadf88fb9d8018690701d1ccacec5c399d125a5436bc2ea
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: f2e9ea1fcf7a5fc46dc5548dbc95f7681ddf5581a577f7e9f94abdeec56f4da6
 
 build:
   noarch: python
