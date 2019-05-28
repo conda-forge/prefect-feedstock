@@ -29,7 +29,6 @@ requirements:
     - dask >=0.18,<2.0
     - distributed >=1.26.1,<2.0
     - docker-py >=3.4.1,<4.1
-    - idna >=2.5,<2.9
     - marshmallow >=3.0.0b19,<3.1
     - marshmallow-oneofschema >=2.0.0b2,<3.0
     - mypy >=0.600,<0.800
