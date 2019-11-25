@@ -10,8 +10,8 @@ source:
   sha256: 28bf9098c578f52a2055da4f03e1551c4e42a69f38dc4b32727b7477099baac3
 
 build:
-  noarch: python
-  number: 0
+  # Cannot use `noarch: python` as this uses typing
+  number: 1
   script: "{{ PYTHON }} -m pip install --no-deps -vv ."
   entry_points:
     - prefect = prefect.cli:cli
@@ -40,7 +40,7 @@ requirements:
     - requests >=2.20,<3.0
     - tabulate >=0.8.0,<1.0
     - toml >=0.9.4,<1.0
-    - typing >=3.6.1,<4.0
+    - typing >=3.6.1,<4.0  # [py<36]
     - typing_extensions >=3.6.2,<4.0
 
 test:
