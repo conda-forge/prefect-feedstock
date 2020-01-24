@@ -1,5 +1,5 @@
 {% set name = "prefect" %}
-{% set version = "0.9.0" %}
+{% set version = "0.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e0b880af2c6d3a00754eee51d445bba50edccecd8b6a6f3cd514c9481149ccd2
+  sha256: 0795a003968a666ab9a8552140794a33b263fb410f09e40336c82240a8857378
 
 build:
   noarch: python
@@ -33,7 +33,7 @@ requirements:
     - mypy_extensions >=0.4.0,<1.0
     - pendulum >=2.0.4,<3.0
     - python-dateutil >2.7.3,<3.0
-    - pyyaml >=3.13,<5.3
+    - pyyaml >=3.13,<5.4
     - python-box >=3.4.4,<5.0
     - python-slugify >=1.2.6,<5.0
     - pytz >=2018.7
