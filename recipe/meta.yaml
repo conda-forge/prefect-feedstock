@@ -1,5 +1,5 @@
 {% set name = "prefect" %}
-{% set version = "0.9.6" %}
+{% set version = "0.9.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3b7d8f99905bbce4927b3c685c57645de0e56db95dadb389c3cfdb368d9e0aa4
+  sha256: 4263344424b5ba61f4a17b32e6b6d74a81692e6577339a0818d5fed5d4b6296b
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
     - python >=3.6
     - click >=7.0,<8.0
     - cloudpickle >=0.6.0,<1.3
-    - croniter >=0.3.24,<0.3.31
+    - croniter >=0.3.24,<1.0
     - dask[bag] >=0.19.3,<3.0
     - distributed >=1.26.1,<3.0
     - docker-py >=3.4.1,<5.0
