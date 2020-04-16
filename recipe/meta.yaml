@@ -50,8 +50,6 @@ test:
     - prefect.tasks.shell
     - prefect.tasks.control_flow
     - prefect.tasks.github
-    - prefect.tasks.templates
-    - prefect.tasks.templates.jinja2
 
 about:
   home: https://github.com/PrefectHQ/prefect
