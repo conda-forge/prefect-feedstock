@@ -5,7 +5,7 @@ Home: https://github.com/PrefectHQ/prefect
 
 Package license: APACHE-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: The Prefect Core automation engine 
 
@@ -122,5 +122,6 @@ Feedstock Maintainers
 * [@cicdw](https://github.com/cicdw/)
 * [@dhirschfeld](https://github.com/dhirschfeld/)
 * [@jcrist](https://github.com/jcrist/)
+* [@joshmeek](https://github.com/joshmeek/)
 * [@rzillman](https://github.com/rzillman/)
 
