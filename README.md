@@ -5,9 +5,11 @@ Home: https://github.com/PrefectHQ/prefect
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/prefect-feedstock/blob/master/LICENSE.txt)
 
 Summary: The Prefect Core automation engine 
+
+Documentation: https://docs.prefect.io/
 
 Prefect is a new workflow management system, designed for modern
 infrastructure and powered by the open-source Prefect Core workflow engine.
