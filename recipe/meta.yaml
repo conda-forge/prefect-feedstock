@@ -1,3 +1,4 @@
+{% set sdata = load_setup_py_data() %}
 {% set name = "prefect" %}
 {% set version = "0.13.10" %}
 
@@ -18,29 +19,13 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ sdata['python_requires'] }}
     - pip
   run:
-    - python >=3.6
-    - click >=7.0
-    - cloudpickle >=0.6.0
-    - croniter >=0.3.24,<1.0
-    - dask-core >=2.15.0
-    - distributed >=2.15.0
-    - docker-py >=3.4.1
-    - marshmallow >=3.0.0b19
-    - marshmallow-oneofschema >=2.0.0b2
-    - mypy_extensions >=0.4.0
-    - pendulum >=2.0.4
-    - python-dateutil >2.7.3
-    - pyyaml >=3.13
-    - python-box >=5.1.0
-    - python-slugify >=1.2.6
-    - pytz >=2018.7
-    - requests >=2.20
-    - tabulate >=0.8.0
-    - toml >=0.9.4
-    - urllib3 >=1.24.3
+    - python {{ sdata['python_requires'] }}
+    {% for dep in sdata['install_requires'] %}
+    - {{ dep|replace(">= ", ">=") }}
+    {% endfor %}
 
 test:
   imports:
@@ -50,6 +35,52 @@ test:
     - prefect.tasks.shell
     - prefect.tasks.control_flow
     - prefect.tasks.github
+  requires:
+    {% for dep in sdata['extras_require']['test'] %}
+    - {{ dep }}
+    {% endfor %}
+
+output:
+  # The main build
+  - name: prefect
+  # The development build
+  - name: prefect-dev
+    requirements:
+      run:
+        - prefect-test =={{ version }}
+        {% for dep in sdata['extras_require']['dev'] %}
+        - {{ dep }}
+        {% endfor %}
+  # Cloud specific builds
+  - name: prefect-aws
+    requirements:
+      run:
+        - prefect =={{ version }}
+        {% for dep in sdata['extras_require']['aws'] %}
+        - {{ dep }}
+        {% endfor %}
+  - name: prefect-azure
+    requirements:
+      run:
+        - prefect =={{ version }}
+        {% for dep in sdata['extras_require']['azure'] %}
+        - {{ dep }}
+        {% endfor %}
+  - name: prefect-gcp
+    requirements:
+      run:
+        - prefect =={{ version }}
+        {% for dep in sdata['extras_require']['gcp'] %}
+        - {{ dep }}
+        {% endfor %}
+  - name: prefect-kubernetes
+    requirements:
+      run:
+        - prefect =={{ version }}
+        {% for dep in sdata['extras_require']['kubernetes'] %}
+        - {{ dep }}
+        {% endfor %}
+
 
 about:
   home: https://github.com/PrefectHQ/prefect
