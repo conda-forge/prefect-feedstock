@@ -97,12 +97,6 @@ test:
 output:
   # The main build
   - name: prefect
-  # The development build
-  - name: prefect-dev
-    requirements:
-      run:
-        - prefect-test =={{ version }}
-        {{ list_requirements(sdata['extras_require']['dev']) | indent(6) }}
   # Cloud specific builds
   - name: prefect-aws
     requirements:
