@@ -24,7 +24,7 @@ requirements:
   run:
     - python {{ sdata['python_requires'] }}
     {% for dep in sdata['install_requires'] %}
-    - {{ dep|replace(">= ", ">=") }}
+    - {{ dep|replace(">= ", ">=")|replace("docker", "docker-py")|replace("msgpack", "msgpack-python") }}
     {% endfor %}
 
 test:
