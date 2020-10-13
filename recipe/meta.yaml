@@ -2,6 +2,63 @@
 {% set name = "prefect" %}
 {% set version = "0.13.10" %}
 
+
+
+
+# Maps dependency names in pip to their conda alternative
+{%
+  set name_mapping =
+  {
+    "msgpack": "msgpack-python",
+    "docker": "docker-py",
+  }
+%}
+
+{% macro map_dep_name(dep) -%}
+  {# Updates dependency names to conda names using `name_mapping` #}
+
+  {# Ensure the white space is trimmed then parse the name #}
+  {% set dep = dep | trim %}
+  {% set dep_name = dep.split(" ")[0] %}
+
+  {# Update the name if it's in the mapping, otherwise leave it as is #}
+  {% if dep_name in name_mapping %}
+    {{ dep | replace(dep_name, name_mapping[dep_name]) }}
+  {% else %}
+    {{ dep }}
+  {% endif %}
+
+{%- endmacro %}
+
+{% macro fix_dep_version(dep) -%}
+  {# Ensure that versions are specified as {NAME} {SPEC}{NUMBER} e.g. python >=3.8 #}
+  {# Expects that {NAME} and {SPEC} are already separated by a space #}
+  {# Better handling could be implemented here with regex_replace but it is not available #}
+
+  {# Parse the dependency into name and version spec #}
+  {% set dep = dep | trim %}
+  {% set dep_parts = dep.split(" ") %}
+  {% set dep_name = dep_parts[0] %}
+
+  {# If there is a version spec, ensure it has no spaces in it #}
+  {% if dep_parts | length > 1 -%}
+    {% set dep_spec = dep_parts[1:] | join("") %}
+    {{ "{} {}".format(dep_name, dep_spec) }}
+
+  {# Otherwise just return it as a name #}
+  {% else -%}
+    {{ dep_name }}
+  {% endif %}
+{%- endmacro %}
+
+{% macro list_requirements(dep_lst) -%}
+  {# Convert a list of requirements to a formatted string. #}
+  {# Recommend use of ` | indent(#)` to match indent level where used #}
+  {% for dep in dep_lst -%}
+- {{ map_dep_name(fix_dep_version(dep)) | trim }}
+  {% endfor %}
+{%- endmacro %}
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -23,9 +80,7 @@ requirements:
     - pip
   run:
     - python {{ sdata['python_requires'] }}
-    {% for dep in sdata['install_requires'] %}
-    - {{ dep|replace(">= ", ">=")|replace("docker", "docker-py")|replace("msgpack", "msgpack-python") }}
-    {% endfor %}
+    {{ list_requirements(sdata['install_requires']) | indent(2) }}
 
 test:
   imports:
@@ -35,10 +90,9 @@ test:
     - prefect.tasks.shell
     - prefect.tasks.control_flow
     - prefect.tasks.github
-  requires:
-    {% for dep in sdata['extras_require']['test'] %}
-    - {{ dep }}
-    {% endfor %}
+  requirements:
+    run:
+      {{ list_requirements(sdata['extras_require']['test']) | indent(4) }}
 
 output:
   # The main build
@@ -48,38 +102,28 @@ output:
     requirements:
       run:
         - prefect-test =={{ version }}
-        {% for dep in sdata['extras_require']['dev'] %}
-        - {{ dep }}
-        {% endfor %}
+        {{ list_requirements(sdata['extras_require']['dev']) | indent(6) }}
   # Cloud specific builds
   - name: prefect-aws
     requirements:
       run:
         - prefect =={{ version }}
-        {% for dep in sdata['extras_require']['aws'] %}
-        - {{ dep }}
-        {% endfor %}
+        {{ list_requirements(sdata['extras_require']['aws']) }}
   - name: prefect-azure
     requirements:
       run:
         - prefect =={{ version }}
-        {% for dep in sdata['extras_require']['azure'] %}
-        - {{ dep }}
-        {% endfor %}
+        {{ list_requirements(sdata['extras_require']['azure']) | indent(6) }}
   - name: prefect-gcp
     requirements:
       run:
         - prefect =={{ version }}
-        {% for dep in sdata['extras_require']['gcp'] %}
-        - {{ dep }}
-        {% endfor %}
+        {{ list_requirements(sdata['extras_require']['gcp']) | indent(6) }}
   - name: prefect-kubernetes
     requirements:
       run:
         - prefect =={{ version }}
-        {% for dep in sdata['extras_require']['kubernetes'] %}
-        - {{ dep }}
-        {% endfor %}
+        {{ list_requirements(sdata['extras_require']['kubernetes']) | indent(6) }}
 
 
 about:
