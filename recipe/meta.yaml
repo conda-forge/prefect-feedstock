@@ -11,16 +11,17 @@ source:
 
 build:
   number: 0
+  skip: True  # [py<36]
   script: {{ PYTHON }} -m pip install --no-deps -vv .
   entry_points:
     - prefect = prefect.cli:cli
 
 requirements:
   host:
-    - python >=3.6
+    - python
     - pip
   run:
-    - python >=3.6
+    - python
     - click >=7.0
     - cloudpickle >=0.6.0
     - croniter >=0.3.24,<1.0
