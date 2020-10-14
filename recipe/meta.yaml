@@ -10,25 +10,25 @@ source:
   sha256: 41d6039ac2dc5623d7ccc8a8507e25028168e041200f3370f655c214a0cf42de
 
 build:
+  noarch: python
   number: 0
-  skip: True  # [py<36]
   script: {{ PYTHON }} -m pip install --no-deps -vv .
   entry_points:
     - prefect = prefect.cli:cli
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - click >=7.0
     - cloudpickle >=0.6.0
     - croniter >=0.3.24,<1.0
     - dask-core >=2.15.0
     - distributed >=2.15.0
     - docker-py >=3.4.1
-    - importlib_resources >=3.0  # [py<39]
+    - importlib_resources >=3.0
     - marshmallow >=3.0.0b19
     - marshmallow-oneofschema >=2.0.0b2
     - mypy_extensions >=0.4.0
