@@ -43,6 +43,7 @@ Installing `prefect` from the `conda-forge` channel can be achieved by adding `c
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `prefect` can be installed with:
@@ -124,6 +125,5 @@ Feedstock Maintainers
 * [@cicdw](https://github.com/cicdw/)
 * [@dhirschfeld](https://github.com/dhirschfeld/)
 * [@jcrist](https://github.com/jcrist/)
-* [@joshmeek](https://github.com/joshmeek/)
 * [@rzillman](https://github.com/rzillman/)
 
