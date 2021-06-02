@@ -123,7 +123,5 @@ Feedstock Maintainers
 =====================
 
 * [@cicdw](https://github.com/cicdw/)
-* [@dhirschfeld](https://github.com/dhirschfeld/)
-* [@jcrist](https://github.com/jcrist/)
-* [@rzillman](https://github.com/rzillman/)
+* [@madkinsz](https://github.com/madkinsz)
 
