@@ -123,5 +123,5 @@ Feedstock Maintainers
 =====================
 
 * [@cicdw](https://github.com/cicdw/)
-* [@madkinsz](https://github.com/madkinsz)
+* [@madkinsz](https://github.com/madkinsz/)
 
