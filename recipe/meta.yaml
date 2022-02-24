@@ -60,8 +60,8 @@ about:
   license_file: LICENSE
   summary: 'The Prefect Core automation engine '
   description: |
-    Prefect is a new workflow management system, designed for modern
-    infrastructure and powered by the open-source Prefect Core workflow engine.
+    Prefect is a workflow management system, designed for modern infrastructure
+    and powered by the open-source Prefect Core workflow engine.
     Users organize `Tasks` into `Flows`, and Prefect takes care of the rest.
   doc_url: https://docs.prefect.io/
 
