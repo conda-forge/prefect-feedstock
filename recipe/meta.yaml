@@ -60,11 +60,11 @@ requirements:
 test:
   imports:
     - prefect
-    - prefect.triggers
-    - prefect.schedules
-    - prefect.tasks.shell
-    - prefect.tasks.control_flow
-    - prefect.tasks.github
+    - prefect.Flow
+    - prefect.task
+    # - prefect.tasks.shell
+    # - prefect.tasks.control_flow
+    # - prefect.tasks.github
 
 about:
   home: https://github.com/PrefectHQ/prefect
