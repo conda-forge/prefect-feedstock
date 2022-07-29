@@ -61,7 +61,7 @@ requirements:
 test:
   imports:
     - prefect
-    - prefect.Flow
+    - prefect.flow
     - prefect.task
     # - prefect.tasks.shell
     # - prefect.tasks.control_flow
