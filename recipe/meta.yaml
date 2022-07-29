@@ -37,7 +37,7 @@ requirements:
     - docker-py >=4.0
     - fastapi >=0.70
     - fsspec >=2022.5.0
-    - griffe >=0.20.0, <0.22.0  # pinned due to https://github.com/PrefectHQ/orion/issues/2224
+    - griffe >=0.20.0, <0.22.0 
     - httpx >=0.22
     - importlib_metadata >=4.4 #,python_version < 3.10
     - jsonpatch >=1.32
@@ -64,10 +64,7 @@ test:
     - prefect.flows
     - prefect.blocks
     - prefect.tasks
-    #- prefect.task
-    # - prefect.tasks.shell
-    # - prefect.tasks.control_flow
-    # - prefect.tasks.github
+    - prefect.engine
 
 about:
   home: https://github.com/PrefectHQ/prefect
