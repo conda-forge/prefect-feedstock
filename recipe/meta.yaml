@@ -68,7 +68,7 @@ test:
   requires:
     - pip
   commands:
-    - pip check
+    #- pip check
     - prefect --help
 
 about:
