@@ -152,4 +152,5 @@ Feedstock Maintainers
 
 * [@cicdw](https://github.com/cicdw/)
 * [@madkinsz](https://github.com/madkinsz/)
+* [@sahiler](https://github.com/sahiler/)
 
