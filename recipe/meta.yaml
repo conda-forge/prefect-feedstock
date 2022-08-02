@@ -65,6 +65,7 @@ test:
     - prefect.blocks
     - prefect.tasks
     - prefect.engine
+    - prefect.cli
   requires:
     - pip
   commands:
