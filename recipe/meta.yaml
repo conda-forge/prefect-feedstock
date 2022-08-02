@@ -1,5 +1,5 @@
 {% set name = "prefect" %}
-{% set version = "2.0.1" %}
+{% set version = "2.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,6 @@ source:
 
 build:
   noarch: python
-  skip: True  # [py==38 and py==310]
   number: 0
   script: {{ PYTHON }} -m pip install --no-deps -vv .
   entry_points:
@@ -40,12 +39,11 @@ requirements:
     - fsspec >=2022.5.0
     - griffe >=0.20.0, <0.22.0 
     - httpx >=0.22
-    - importlib_metadata >=4.4  # [py<=39]
+    - importlib_metadata >=4.4 
     - jsonpatch >=1.32
     - python-kubernetes >=24.2.0
     - packaging >=21.3
     - pendulum >=2.1.2
-    - pickle5 >=0.0.11  # [py<38]
     - pydantic >=1.8.2
     - python-slugify >=5.0
     - pytz >=2021.1
