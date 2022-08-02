@@ -1,5 +1,5 @@
 {% set name = "prefect" %}
-{% set version = "2.0.2" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
