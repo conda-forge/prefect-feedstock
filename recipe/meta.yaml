@@ -11,6 +11,7 @@ source:
 
 build:
   noarch: python
+  skip: True  # [py==38 and py==310]
   number: 0
   script: {{ PYTHON }} -m pip install --no-deps -vv .
   entry_points:
