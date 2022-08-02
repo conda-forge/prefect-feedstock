@@ -68,10 +68,6 @@ test:
     - prefect.cli
   requires:
     - pip
-  commands:
-    #- pip check
-    - prefect --help
-
 about:
   home: https://github.com/PrefectHQ/prefect
   license: Apache-2.0
