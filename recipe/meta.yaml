@@ -61,13 +61,13 @@ requirements:
 test:
   imports:
     - prefect
-    - prefect.flows
-    - prefect.blocks
-    - prefect.tasks
-    - prefect.engine
     - prefect.cli
   requires:
     - pip
+  commands:
+    - pip check
+    - prefect version 
+
 about:
   home: https://github.com/PrefectHQ/prefect
   license: Apache-2.0
