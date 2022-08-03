@@ -11,10 +11,10 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install --no-deps -vv .
   entry_points:
-    - prefect = prefect.cli:cli
+    - prefect = prefect.cli:app
 
 requirements:
   host:
@@ -37,9 +37,9 @@ requirements:
     - docker-py >=4.0
     - fastapi >=0.70
     - fsspec >=2022.5.0
-    - griffe >=0.20.0, <0.22.0 
+    - griffe >=0.20.0, <0.22.0
     - httpx >=0.22
-    - importlib_metadata >=4.4 
+    - importlib_metadata >=4.4
     - jsonpatch >=1.32
     - pathspec >=0.8.0
     - python-kubernetes >=24.2.0
@@ -69,7 +69,10 @@ test:
     # A `--ignore` flag is in progress at https://github.com/pypa/pip/pull/11159 which will
     # allow us to enable this check again while excluding readchar
     # - pip check
-    - prefect version 
+    # Check that the entrypoint is configured
+    - prefect --help
+    # Check that the long-form version command works (this uses a database and client)
+    - prefect version
 
 about:
   home: https://github.com/PrefectHQ/prefect
