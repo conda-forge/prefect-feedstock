@@ -73,6 +73,8 @@ test:
     - prefect --help
     # Check that the long-form version command works (this uses a database and client)
     - prefect version
+    # Check that the version is correct
+    - [ "$(prefect --version)" = "{{ version }}" ]
 
 about:
   home: https://github.com/PrefectHQ/prefect
