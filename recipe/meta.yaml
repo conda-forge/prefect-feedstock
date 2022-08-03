@@ -14,7 +14,7 @@ build:
   number: 0
   script: {{ PYTHON }} -m pip install --no-deps -vv .
   entry_points:
-    - prefect = prefect.cli:cli
+    - prefect = prefect.cli:app
 
 requirements:
   host:
