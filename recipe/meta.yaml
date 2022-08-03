@@ -41,6 +41,7 @@ requirements:
     - httpx >=0.22
     - importlib_metadata >=4.4 
     - jsonpatch >=1.32
+    - pathspec >=0.8.0
     - python-kubernetes >=24.2.0
     - packaging >=21.3
     - pendulum >=2.1.2
@@ -64,7 +65,6 @@ test:
     - prefect.blocks
     - prefect.tasks
     - prefect.engine
-    - prefect.cli
   requires:
     - pip
 about:
