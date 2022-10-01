@@ -1,5 +1,5 @@
 {% set name = "prefect" %}
-{% set version = "2.4.0" %}
+{% set version = "2.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 63ccb4b8fbe63a6bff6c2075bb8cdb863091e8509e41ebc0b44099993def48c9
+  sha256: 9330d07af19299e20d02e6904ffb3d5869a190ffa8c8aba95200b5033477a995
 
 build:
   noarch: python
@@ -27,6 +27,7 @@ requirements:
     - aiosqlite >=0.17.0
     - alembic >=1.7.5
     - anyio >=3.4.0
+    - apprise >=1.0.0
     - asgi-lifespan >=1.0
     - asyncpg >=0.23
     - click >=8.0, < 8.2
@@ -52,7 +53,6 @@ requirements:
     - pyyaml >=5.4.1
     - readchar >=3.0.5
     - rich >=11.0
-    - slack-sdk >=3.15.1
     - sqlalchemy[asyncio] >=1.4.20,!= 1.4.33
     - toml >=0.10.0
     - typer >=0.4.1
