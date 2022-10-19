@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install --no-deps -vv .
   entry_points:
     - prefect = prefect.cli:app
@@ -43,6 +43,7 @@ requirements:
     - importlib_metadata >=4.4
     - jsonpatch >=1.32
     - orjson >=3.7
+    - openssl ==1.1.1 
     - pathspec >=0.8.0
     - python-kubernetes >=24.2.0
     - packaging >=21.3
@@ -86,7 +87,7 @@ about:
   description: |
     Prefect is a workflow management system, designed for modern infrastructure
     and powered by the open-source Prefect Core workflow engine.
-    Users organize `Tasks` into `Flows`, and Prefect takes care of the rest.
+    Users organize their python code into `Tasks` and `Flows`, and Prefect takes care of the rest.
   doc_url: https://docs.prefect.io/
 
 extra:
