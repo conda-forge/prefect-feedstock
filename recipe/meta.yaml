@@ -1,5 +1,5 @@
 {% set name = "prefect" %}
-{% set version = "2.6.3" %}
+{% set version = "2.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b9d55bb53d220b3c9956bdd4f4aa1307d06298cb0a2e8640b70c26214bdcdf1d
+  sha256: c7bbf65f3355f2f80fde4499d079a6451a98ba47215066aa8abf1e482aa604f2
 
 build:
   noarch: python
@@ -20,7 +20,6 @@ requirements:
   host:
     - python >=3.7
     - pip
-    - openssl
   run:
     - python >=3.7
     - aiofiles >=0.7.0
@@ -43,6 +42,7 @@ requirements:
     - httpx >=0.22
     - importlib_metadata >=4.4
     - jsonpatch >=1.32
+    - openssl ==1.1.1s
     - orjson >=3.7
     - pathspec >=0.8.0
     - python-kubernetes >=24.2.0
