@@ -13,7 +13,7 @@ Documentation: https://docs.prefect.io/
 
 Prefect is a workflow management system, designed for modern infrastructure
 and powered by the open-source Prefect Core workflow engine.
-Users organize `Tasks` into `Flows`, and Prefect takes care of the rest.
+Users organize their python code into `Tasks` and `Flows`, and Prefect takes care of the rest.
 
 
 Current build status
