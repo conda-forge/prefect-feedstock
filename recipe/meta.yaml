@@ -35,6 +35,7 @@ requirements:
     - coolname >=1.0.4
     - croniter >=1.0.12
     - cryptography >=36.0.1
+    - dateparser >=1.1.1
     - docker-py >=4.0
     - fastapi >=0.70
     - fsspec >=2022.5.0
@@ -95,3 +96,5 @@ extra:
     - Sahiler
     - cicdw
     - madkinsz
+    - serinamarie
+    - peytonrunyan
