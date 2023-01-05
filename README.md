@@ -153,4 +153,6 @@ Feedstock Maintainers
 * [@Sahiler](https://github.com/Sahiler/)
 * [@cicdw](https://github.com/cicdw/)
 * [@madkinsz](https://github.com/madkinsz/)
+* [@peytonrunyan](https://github.com/peytonrunyan/)
+* [@serinamarie](https://github.com/serinamarie/)
 
