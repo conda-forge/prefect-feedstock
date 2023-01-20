@@ -150,12 +150,10 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@PrefectHQ/open-source](https://github.com/PrefectHQ/open-source/)
 * [@Sahiler](https://github.com/Sahiler/)
 * [@cicdw](https://github.com/cicdw/)
 * [@madkinsz](https://github.com/madkinsz/)
 * [@peytonrunyan](https://github.com/peytonrunyan/)
 * [@serinamarie](https://github.com/serinamarie/)
-
-
-<!-- dummy commit to enable rerendering -->
 
