@@ -43,6 +43,7 @@ requirements:
     - httpx >=0.22
     - importlib_metadata >=4.4
     - jsonpatch >=1.32
+    - jsonschema >=3.2.0, <5.0.0
     - jinja2 >=3.0.0
     - orjson >=3.7
     - pathspec >=0.8.0
