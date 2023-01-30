@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install --no-deps -vv .
   entry_points:
     - prefect = prefect.cli:app
@@ -56,7 +56,7 @@ requirements:
     - pyyaml >=5.4.1
     - readchar >=3.0.5
     - rich >=11.0
-    - sqlalchemy[asyncio] >=1.4.20,!= 1.4.33
+    - sqlalchemy[asyncio] >=1.4.20,!= 1.4.33, <2.0.0a
     - toml >=0.10.0
     - typer >=0.4.1
     - typing_extensions >=4.0.1
