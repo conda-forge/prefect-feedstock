@@ -61,7 +61,7 @@ requirements:
     - typer >=0.4.1
     - typing_extensions >=4.0.1
     - uvicorn  >=0.14.0
-    - websockets >= 10.4
+    - websockets >=10.4
 
 test:
   imports:
