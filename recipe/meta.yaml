@@ -95,6 +95,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - rpeden
     - PrefectHQ/open-source
     - peytonrunyan
     - serinamarie
