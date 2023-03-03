@@ -1,11 +1,11 @@
-About prefect
-=============
+About prefect-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/prefect-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/PrefectHQ/prefect
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/prefect-feedstock/blob/main/LICENSE.txt)
 
 Summary: The Prefect Core automation engine 
 
@@ -154,6 +154,6 @@ Feedstock Maintainers
 * [@Sahiler](https://github.com/Sahiler/)
 * [@cicdw](https://github.com/cicdw/)
 * [@madkinsz](https://github.com/madkinsz/)
-* [@peytonrunyan](https://github.com/peytonrunyan/)
+* [@rpeden](https://github.com/rpeden/)
 * [@serinamarie](https://github.com/serinamarie/)
 
