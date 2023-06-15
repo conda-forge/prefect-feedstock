@@ -155,6 +155,3 @@ Feedstock Maintainers
 * [@cicdw](https://github.com/cicdw/)
 * [@serinamarie](https://github.com/serinamarie/)
 
-
-<!-- dummy commit to enable rerendering -->
-
