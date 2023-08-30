@@ -39,7 +39,6 @@ requirements:
     - docker-py >=4.0
     - fastapi >=0.70
     - fsspec >=2022.5.0
-    - python-graphviz >=0.20.1
     - griffe >=0.20.0, <0.22.0
     - httpx >=0.22
     - importlib_metadata >=4.4
@@ -48,6 +47,7 @@ requirements:
     - jinja2 >=3.0.0
     - orjson >=3.7
     - pathspec >=0.8.0
+    - python-graphviz >=0.20.1
     - python-kubernetes >=24.2.0
     - packaging >=21.3
     - pendulum >=2.1.2
