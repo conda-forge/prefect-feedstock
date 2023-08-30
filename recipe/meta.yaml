@@ -39,6 +39,7 @@ requirements:
     - docker-py >=4.0
     - fastapi >=0.70
     - fsspec >=2022.5.0
+    - python-graphviz >=0.20.1
     - griffe >=0.20.0, <0.22.0
     - httpx >=0.22
     - importlib_metadata >=4.4
