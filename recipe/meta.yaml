@@ -1,5 +1,5 @@
 {% set name = "prefect" %}
-{% set version = "2.11.3" %}
+{% set version = "2.11.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 78c2a15770d821f8fc89b8fdd729bd7346d024d476fc42bf172671bcd4c7d331
+  sha256: bcc7d5b23665bbb97d87c0cd44a9e8147a987aeb1a1455019d1efbebde2b6064
 
 build:
   noarch: python
@@ -39,6 +39,7 @@ requirements:
     - docker-py >=4.0
     - fastapi >=0.70
     - fsspec >=2022.5.0
+    - python-graphviz >=0.20.1
     - griffe >=0.20.0, <0.22.0
     - httpx >=0.22
     - importlib_metadata >=4.4
