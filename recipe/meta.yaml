@@ -1,5 +1,5 @@
 {% set name = "prefect" %}
-{% set version = "2.14.4" %}
+{% set version = "2.14.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 29c3b5d11a167317b61ff6ac8e75970464f4fc2046dfb1b7d4bf9fcfdeaa563e
+  sha256: 065aa0a346c02fdeab4b7937cf121d5c92877ce6df9c8b26e3ba6373b0e8d71a
 
 build:
   noarch: python
