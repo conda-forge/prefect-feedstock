@@ -14,7 +14,6 @@ build:
   number: 0
   script:
     - {{ PYTHON }} -m pip install --no-deps -vv .
-    - {{ PYTHON }} -m pip install greenback >= 1.2.0
   entry_points:
     - prefect = prefect.cli:app
 
@@ -38,6 +37,7 @@ requirements:
     - dateparser >=1.1.1, <2.0.0
     - docker-py >=4.0, <7.0
     - fsspec >=2022.5.0
+    - greenback >=1.2.0
     - griffe >=0.20.0
     - httpcore >=0.15.0, <2.0.0
     - httpx >=0.23, !=0.23.2
