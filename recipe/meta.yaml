@@ -1,5 +1,5 @@
 {% set name = "prefect" %}
-{% set version = "2.19.8" %}
+{% set version = "2.19.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 09a32292186a3335bd6282c58c4d361ab217fabac22164e1098dc1fcaca43139
+  sha256: 286d4da3374206ac7ae964542df1fbd83093f48519a6cb4a79410db5edf923e6
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install --no-deps -vv .
   entry_points:
     - prefect = prefect.cli:app
@@ -65,7 +65,7 @@ requirements:
     - sqlalchemy[asyncio] >=1.4.22,!= 1.4.33, <3.0.0
     - starlette >=0.27.0, <0.28.0
     - toml >=0.10.0
-    - typer >=0.12.0,!= 0.12.2, <0.13.0 
+    - typer >=0.12.0,!= 0.12.2, <0.13.0
     - typing_extensions >=4.5.0, <5.0.0
     - ujson >=5.8.0, <6.0.0
     - uvicorn >=0.14.0, <0.29.0
