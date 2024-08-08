@@ -35,7 +35,7 @@ requirements:
     - cryptography >=36.0.1
     - dateparser >=1.1.1, <2.0.0
     - exceptiongroup >=1.2.1
-    - docker-py >=4.0, <7.0
+    - docker-py >=4.0
     - fsspec >=2022.5.0
     - griffe >=0.20.0
     - httpcore >=0.15.0, <2.0.0
