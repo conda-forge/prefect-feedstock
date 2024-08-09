@@ -151,5 +151,6 @@ Feedstock Maintainers
 =====================
 
 * [@cicdw](https://github.com/cicdw/)
+* [@desertaxle](https://github.com/desertaxle/)
 * [@zzstoatzz](https://github.com/zzstoatzz/)
 
