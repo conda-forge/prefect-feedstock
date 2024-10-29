@@ -20,6 +20,7 @@ requirements:
   host:
     - python >=3.9
     - pip
+    - setuptools
   run:
     - python >=3.9
     - aiosqlite >=0.17.0, <1.0.0
