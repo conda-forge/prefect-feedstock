@@ -11,18 +11,18 @@ source:
 
 build:
   noarch: python
-  number: 0
-  script: {{ PYTHON }} -m pip install --no-deps -vv .
+  number: 1
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - prefect = prefect.cli:app
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - aiosqlite >=0.17.0, <1.0.0
     - alembic >=1.7.5, <2.0.0
     - anyio >=4.4.0, <5.0.0
@@ -85,6 +85,7 @@ test:
     - prefect.cli
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     # `pip check` fails on `readchar` which has a different identifier when provided by conda
     # A `--ignore` flag is in progress at https://github.com/pypa/pip/pull/11159 which will
