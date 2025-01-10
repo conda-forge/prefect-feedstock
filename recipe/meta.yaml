@@ -1,5 +1,5 @@
 {% set name = "prefect" %}
-{% set version = "3.1.11" %}
+{% set version = "3.1.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 21ae99a780a74a4e977429208816d7dfe4874e8c323917667e4744cb8c3d36f3
+  sha256: c61ab39ea9d195395d5ec5e9c9e4d199837dc30ae9315b9e390ffd451f49bbe2
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - prefect = prefect.cli:app
