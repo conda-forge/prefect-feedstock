@@ -1,5 +1,5 @@
 {% set name = "prefect" %}
-{% set version = "3.2.2" %}
+{% set version = "3.2.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b1d24d4c5ec6e028c305f438cfd8ba71a6600d4dbd9c62097eb50e8a85f580bc
+  sha256: f31290bab923cc8ddd5afd7b10d9e9990583bd2ad1be6402f31f36ffddf08760
 
 build:
   noarch: python
@@ -20,7 +20,8 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
+    - hatchling
+    - versioningit
   run:
     - python >={{ python_min }}
     - aiosqlite >=0.17.0, <1.0.0
