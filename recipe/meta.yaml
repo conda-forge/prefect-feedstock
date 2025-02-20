@@ -21,7 +21,7 @@ requirements:
     - python {{ python_min }}
     - pip
     - hatchling
-    - versiongit
+    - versioningit
   run:
     - python >={{ python_min }}
     - aiosqlite >=0.17.0, <1.0.0
