@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - prefect = prefect.cli:app
@@ -71,6 +71,7 @@ requirements:
     - rfc3339-validator >=0.1.4, <0.2.0
     - rich >=11.0, <14.0
     - ruamel.yaml >=0.17.0
+    - semver
     - sniffio >=1.3.0, <2.0.0
     - sqlalchemy[asyncio] >=2.0, <3.0.0
     - toml >=0.10.0
@@ -80,6 +81,7 @@ requirements:
     - python-uv >=0.6.0
     - uvicorn >=0.14.0,!=0.29.0
     - websockets >=10.4, <14.0
+    - whenever
 
 test:
   imports:
@@ -89,10 +91,7 @@ test:
     - pip
     - python {{ python_min }}
   commands:
-    # `pip check` fails on `readchar` which has a different identifier when provided by conda
-    # A `--ignore` flag is in progress at https://github.com/pypa/pip/pull/11159 which will
-    # allow us to enable this check again while excluding readchar
-    # - pip check
+    - pip check
     # Check that the entrypoint is configured
     - prefect --help
     # Check that the long-form version command works (this uses a database and client)
@@ -117,3 +116,4 @@ extra:
     - zzstoatzz
     - cicdw
     - desertaxle
+    - e7b7
