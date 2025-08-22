@@ -79,7 +79,9 @@ requirements:
     - ujson >=5.8.0, <6.0.0
     - python-uv >=0.6.0
     - uvicorn >=0.14.0,!=0.29.0
-    - websockets >=10.4, <14.0
+    - websockets >=13.0, <16.0
+
+
 
 test:
   imports:
