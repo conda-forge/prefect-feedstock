@@ -1,5 +1,5 @@
 {% set name = "prefect" %}
-{% set version = "3.5.0" %}
+{% set version = "3.6.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 05acf33be811fe62dcc7eb65cac3cc27372a99cb545342d260bd1831933256b8
+  sha256: 6e4155c6d4bcd37a801641ae504fb41ea5075dd626313138714e0026108206c3
 
 build:
   noarch: python
@@ -30,7 +30,7 @@ requirements:
     - apprise >=1.1.0,<2.0.0
     - asgi-lifespan >=1.0,<3.0
     - asyncpg >=0.23,<1.0.0
-    - cachetools >=5.3,<6.0
+    - cachetools >=5.3,<7.0
     - click >=8.0,<9.0
     - cloudpickle >=2.0,<4.0
     - coolname >=1.0.4,<3.0.0
@@ -61,7 +61,9 @@ requirements:
     - pydantic-core >=2.12.0,<3.0.0
     - pydantic-extra-types >=2.8.2,<3.0.0
     - pydantic-settings >2.2.1,<3.0.0,!=2.9.0
+    - pydocket >=0.13.3
     - python-dateutil >=2.8.2,<3.0.0
+    - python-json-logger >=3.2.1
     - python-graphviz >=0.20.1
     - python-slugify >=5.0,<9.0
     - python-tzdata
