@@ -1,5 +1,5 @@
 {% set name = "prefect" %}
-{% set version = "3.5.0" %}
+{% set version = "3.6.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 05acf33be811fe62dcc7eb65cac3cc27372a99cb545342d260bd1831933256b8
+  sha256: 8fa7aeeb0ff85ee8bc4f2f04dc1caac9fdb99d46b64c0318beaf7ae95d21e186
 
 build:
   noarch: python
@@ -61,6 +61,7 @@ requirements:
     - pydantic-core >=2.12.0,<3.0.0
     - pydantic-extra-types >=2.8.2,<3.0.0
     - pydantic-settings >2.2.1,<3.0.0,!=2.9.0
+    - pydocket >=0.14.1
     - python-dateutil >=2.8.2,<3.0.0
     - python-graphviz >=0.20.1
     - python-slugify >=5.0,<9.0
