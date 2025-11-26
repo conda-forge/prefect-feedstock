@@ -1,5 +1,5 @@
 {% set name = "prefect" %}
-{% set version = "3.5.0" %}
+{% set version = "3.6.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 05acf33be811fe62dcc7eb65cac3cc27372a99cb545342d260bd1831933256b8
+  sha256: 8fa7aeeb0ff85ee8bc4f2f04dc1caac9fdb99d46b64c0318beaf7ae95d21e186
 
 build:
   noarch: python
@@ -30,7 +30,7 @@ requirements:
     - apprise >=1.1.0,<2.0.0
     - asgi-lifespan >=1.0,<3.0
     - asyncpg >=0.23,<1.0.0
-    - cachetools >=5.3,<6.0
+    - cachetools >=5.3,<7.0
     - click >=8.0,<9.0
     - cloudpickle >=2.0,<4.0
     - coolname >=1.0.4,<3.0.0
@@ -46,7 +46,7 @@ requirements:
     - httpx >=0.23,!=0.23.2
     - humanize >=4.9.0,<5.0.0
     - importlib-metadata >=4.4
-    - jinja2 >=3.0.0,<4.0.0
+    - jinja2 >=3.1.6,<4.0.0
     - jinja2-humanize-extension >=0.4.0
     - jsonpatch >=1.32,<2.0
     - jsonschema >=4.18.0,<5.0.0
@@ -61,6 +61,7 @@ requirements:
     - pydantic-core >=2.12.0,<3.0.0
     - pydantic-extra-types >=2.8.2,<3.0.0
     - pydantic-settings >2.2.1,<3.0.0,!=2.9.0
+    - pydocket >0.13.3
     - python-dateutil >=2.8.2,<3.0.0
     - python-graphviz >=0.20.1
     - python-slugify >=5.0,<9.0
