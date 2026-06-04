@@ -34,7 +34,7 @@ requirements:
     - cachetools >=5.3,<8.0
     - click >=8.0,<9
     - cloudpickle >=2.0,<4.0
-    - coolname >=1.0.4,<5.0.0
+    - coolname >=1.0.4,<5.0.0,!=4.1.0
     - cryptography >=36.0.1
     - cyclopts >=3.0
     - dateparser >=1.1.1,<2.0.0
