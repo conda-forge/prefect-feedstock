@@ -1,5 +1,5 @@
 {% set name = "prefect" %}
-{% set version = "3.7.8" %}
+{% set version = "3.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f8e363d44b92ca11abae3a9307bf1325236c3387cd5969694e7b03a5179ab6d8
+  sha256: 31d8b01f1c2682a266f7db25797d9c8f3780842b65c44a401379aa61f8e9e393
 
 build:
   noarch: python
@@ -27,7 +27,7 @@ requirements:
     - aiosqlite >=0.17.0,<1.0.0
     - alembic >=1.7.5,<2.0.0
     - amplitude-analytics >=1.2.1,<2.0.0
-    - anyio >=4.4.0,<5.0.0
+    - anyio >=4.4.0,<5.0.0,!=4.14.2
     - apprise >=1.1.0,<2.0.0
     - asgi-lifespan >=1.0,<3.0
     - asyncpg >=0.23,<1.0.0
@@ -54,7 +54,7 @@ requirements:
     - opentelemetry-api >=1.27.0,<2.0.0
     - orjson >=3.7,<4.0
     - packaging >=21.3,<25.1
-    - pathspec >=0.8.0
+    - pathspec >=0.10.1
     - pendulum >=3.0.0,<4
     - pluggy >=1.6.0
     - prometheus_client >=0.20.0
