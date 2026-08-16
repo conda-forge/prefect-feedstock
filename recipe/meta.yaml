@@ -1,13 +1,13 @@
 {% set name = "prefect" %}
-{% set version = "3.8.2" %}
+{% set version = "3.8.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 614d4ec4d13020f0e5e5b6eac8766b0641d34d4a46c360b6e7f1fa89df3037ec
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 6b7d67bd355841d28f2df121ef08e2718f43b2fed5879f688eab075f957d37c3
 
 build:
   noarch: python
