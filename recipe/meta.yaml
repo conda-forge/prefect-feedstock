@@ -1,5 +1,5 @@
 {% set name = "prefect" %}
-{% set version = "3.8.4" %}
+{% set version = "3.8.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ab7d7980db95e90a949b09732147324b939d1daf9a754b19c122040ff6a3a559
+  sha256: d393bf6809c8bbb1c584c6fbfdbb0bde9e247432e7a3d258351071e7bd818d6e
 
 build:
   noarch: python
