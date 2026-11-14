@@ -1,7 +1,7 @@
 About prefect-feedstock
 =======================
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/prefect-feedstock-release-20261112-feedstock/blob/main/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/prefect-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/PrefectHQ/prefect
 
@@ -23,8 +23,8 @@ Current build status
 <table><tr>
     <td>All platforms:</td>
     <td>
-      <a href="https://github.com/conda-forge/prefect-feedstock-release-20261112-feedstock/actions/workflows/conda-build.yml">
-        <img src="https://github.com/conda-forge/prefect-feedstock-release-20261112-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      <a href="https://github.com/conda-forge/prefect-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/prefect-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
